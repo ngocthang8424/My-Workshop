@@ -1,5 +1,5 @@
 baseURL = "https://ngocthang8424.github.io/My-Workshop/"
-relativeURLs = false
+relativeURLs = true
 canonifyURLs = false
 defaultContentLanguage = "en"
 
