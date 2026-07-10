@@ -91,13 +91,3 @@ Tham gia **một sự kiện buổi sáng** (bốn session nối tiếp) bổ su
 
 - Thiết kế scalable bắt đầu từ yêu cầu rõ và ranh giới dịch vụ, không chỉ chọn dịch vụ AWS phổ biến.
 - DevOps và văn hóa doanh nghiệp đều coi trọng automation, giao tiếp và làm việc nhất quán trong team.
-
-#### Một số hình ảnh khi tham gia sự kiện
-
-<div class="event-photo-gallery">
-  <img src="/images/event2/event2-photo1.jpg" alt="Event 2 - Session Presentation">
-  <img src="/images/event2/event2-photo2.jpg" alt="Event 2 - LinkedIn Connection">
-  <img src="/images/event2/event2-photo3.jpg" alt="Event 2 - QR Preview">
-  <img src="/images/event2/event2-photo4.jpg" alt="Event 2 - Speaker Presentation">
-  <img src="/images/event2/event2-photo5.jpg" alt="Event 2 - Session Talk">
-</div>

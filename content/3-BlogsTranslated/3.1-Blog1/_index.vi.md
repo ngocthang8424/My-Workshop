@@ -69,9 +69,3 @@ pre: " <b> 3.1. </b> "
 ### Kết luận
 
 Kiến trúc cân bằng giữa chất lượng ảnh và vận hành — phù hợp cho môi trường cloud, dễ mở rộng và có các điểm cải tiến rõ ràng cho hiệu năng và chi phí.
-
----
-
-### Bài viết đã được chia sẻ trên AWS Study Group
-
-![Bài viết trên AWS Study Group VN](/images/blog1/facebook-post.png)

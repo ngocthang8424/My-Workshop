@@ -6,6 +6,10 @@ defaultContentLanguage = "en"
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
 
+# Development server configuration
+[server]
+port = 1313
+
 # For search functionality
 [outputs]
 home = [ "HTML", "RSS", "JSON"]

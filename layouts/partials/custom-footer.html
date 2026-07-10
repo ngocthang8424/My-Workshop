@@ -1,0 +1,36 @@
+<script>
+(function ($) {
+  function normalizePath(value) {
+    if (!value) return "";
+    try {
+      return (value.indexOf("://") > -1 ? new URL(value).pathname : value)
+        .replace(/\/$/, "") || "/";
+    } catch (e) {
+      return value.replace(/\/$/, "") || "/";
+    }
+  }
+
+  function markVisitedLinks() {
+    var currentUrl = $("body").attr("data-url");
+    if (currentUrl) {
+      sessionStorage.setItem(currentUrl, 1);
+    }
+
+    $("[data-nav-id]").each(function () {
+      var $item = $(this);
+      var navId = $item.attr("data-nav-id");
+      var navPath = normalizePath(navId);
+
+      for (var key in sessionStorage) {
+        if (sessionStorage.getItem(key) != 1) continue;
+        if (key === navId || normalizePath(key) === navPath) {
+          $item.addClass("visited");
+          break;
+        }
+      }
+    });
+  }
+
+  $(window).on("load", markVisitedLinks);
+})(jQuery);
+</script>

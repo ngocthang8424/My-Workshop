@@ -3,7 +3,12 @@ title: "Báo cáo Thực tập"
 date: 2026-01-01
 weight: 1
 chapter: false
+redirect: "/0-report/"
 ---
+
+<script>
+window.location.replace("/My-Workshop/0-report/");
+</script>
 
 # Báo cáo Thực tập
 

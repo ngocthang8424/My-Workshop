@@ -1,3 +1,6 @@
+/* Load Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 /* Typography overrides for a cleaner, more modern look */
 
 :root {
@@ -6,7 +9,7 @@
 }
 
 html {
-  font-size: 20px;
+  font-size: 16px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14,8 +17,8 @@ html {
 
 body {
   font-family: var(--body-font);
-  font-size: 1.1rem;
-  line-height: 1.75;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* Content area spacing & readability */
@@ -26,17 +29,17 @@ body {
 #body-inner p,
 #body-inner li {
   letter-spacing: 0.1px;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 #body-inner strong,
 #body-inner b {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 #body-inner ul,
 #body-inner ol {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 /* Headings */
@@ -49,23 +52,23 @@ body {
 }
 
 #body-inner h1 {
-  font-size: 2.75rem;
-}
-
-#body-inner h2 {
   font-size: 2.25rem;
 }
 
-#body-inner h3 {
-  font-size: 1.85rem;
+#body-inner h2 {
+  font-size: 1.875rem;
 }
 
-#body-inner h4 {
+#body-inner h3 {
   font-size: 1.5rem;
 }
 
-#body-inner h5 {
+#body-inner h4 {
   font-size: 1.25rem;
+}
+
+#body-inner h5 {
+  font-size: 1.125rem;
 }
 
 /* Code blocks */
@@ -78,14 +81,14 @@ tt {
 
 /* Tables (worklog) */
 table {
-  font-size: 1.15em;
+  font-size: 1rem;
 }
 
 table th {
   font-weight: 600;
   color: #000 !important;
   background-color: #f7f7f7 !important;
-  font-size: 1.05em;
+  font-size: 0.95rem;
 }
 
 table td,
@@ -213,3 +216,337 @@ a[onclick*="clearHistory"],
 #sidebar-footer {
   display: block;
 }
+
+/* Override content background to white while keeping sidebar dark */
+body {
+  background: #ffffff !important;
+  color: #323232 !important;
+}
+
+#body {
+  background: #ffffff !important;
+}
+
+#body .padding {
+  background: #ffffff !important;
+}
+
+/* Reset text color for content area to dark (readable on white) */
+#body-inner,
+#body-inner p,
+#body-inner li,
+#body-inner span:not(#sidebar *) {
+  color: #323232 !important;
+}
+
+/* Keep headings readable on white background */
+h1 {
+  color: #1a1a1a !important;
+  text-shadow: none !important;
+}
+
+h2, h3, h4, h5, h6 {
+  color: #2c3e50 !important;
+}
+
+/* Keep links readable on white background */
+#body a {
+  color: #0066cc !important;
+}
+
+#body a:hover {
+  color: #004499 !important;
+  text-shadow: none !important;
+}
+
+/* Code blocks on white background */
+pre {
+  background: #f5f5f5 !important;
+  border: 1px solid #e0e0e0 !important;
+}
+
+code {
+  background: #f0f0f0 !important;
+  color: #c7254e !important;
+}
+
+/* Blockquote on white background */
+blockquote {
+  background: #f9f9f9 !important;
+  border-left-color: #0066cc !important;
+}
+
+blockquote p {
+  color: #555555 !important;
+}
+
+/* Top bar on white background */
+#top-bar {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+#breadcrumbs span,
+#breadcrumbs a {
+  color: #555555 !important;
+}
+
+#breadcrumbs a:hover {
+  color: #0066cc !important;
+}
+
+/* Student Information Form Styles */
+.student-info-container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.student-info-title {
+  font-size: 1.75rem !important;
+  font-weight: 400 !important;
+  color: #1a1a1a !important;
+  margin-bottom: 1.5rem !important;
+  margin-top: 0 !important;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.student-info-content {
+  display: flex;
+  gap: 0;
+  align-items: stretch;
+  background: #ffffff;
+  border-radius: 0;
+  overflow: hidden;
+  border: 1px solid #e8e8e8;
+  max-width: 95%;
+}
+
+/* Profile Card - Left Side */
+.profile-card {
+  flex-shrink: 0;
+  width: 240px;
+  background: #2d4e5c;
+  padding: 2.5rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image-wrapper {
+  width: 160px;
+  height: 220px;
+  border-radius: 80px;
+  overflow: hidden;
+  border: 4px solid #5a9bd5;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.profile-name {
+  color: #ffffff !important;
+  font-size: 1.25rem !important;
+  font-weight: 500 !important;
+  text-align: center;
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+
+/* Information Grid - Right Side */
+.info-grid {
+  flex: 1;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: #ffffff;
+}
+
+.info-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  padding: 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.info-row.full-width {
+  grid-template-columns: 1fr;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem 1.5rem;
+  border-right: 1px solid #e8e8e8;
+}
+
+.info-row .info-item:last-child {
+  border-right: none;
+}
+
+.info-row.full-width .info-item {
+  border-right: none;
+}
+
+.info-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #7a7a7a;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: 0.15rem;
+}
+
+.info-value {
+  font-size: 0.95rem;
+  color: #333333;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .student-info-content {
+    flex-direction: column;
+  }
+  
+  .profile-card {
+    width: 100%;
+  }
+  
+  .info-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .info-item {
+    border-right: none !important;
+    border-bottom: 1px solid #e8e8e8;
+  }
+  
+  .info-row:last-child .info-item:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Report Content Styles */
+.report-content-container {
+  margin-top: 3rem;
+  max-width: 100%;
+}
+
+.report-content-title {
+  font-size: 1.75rem !important;
+  font-weight: 400 !important;
+  color: #1a1a1a !important;
+  margin-bottom: 1.5rem !important;
+  margin-top: 0 !important;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.report-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 95%;
+}
+
+.report-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #00a8cc;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.report-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  border-left-color: #0088aa;
+}
+
+.report-card-title {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #00a8cc !important;
+  margin: 0 0 4px 0 !important;
+  line-height: 1.3 !important;
+}
+
+.report-card-description {
+  font-size: 13px !important;
+  color: #666666 !important;
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+
+/* Responsive for Report Cards */
+@media (max-width: 1024px) {
+  .report-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .report-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Fix Navigation Arrows */
+#body .nav {
+  color: #333333 !important;
+  font-size: 2rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#body .nav:hover {
+  background: rgba(0, 102, 204, 0.08) !important;
+  color: #0066cc !important;
+}
+
+#body .nav i {
+  color: inherit !important;
+  font-style: normal !important;
+}
+
+/* Use Unicode arrows if icon font fails */
+#body .nav.nav-prev::before {
+  content: "‹" !important;
+  font-size: 3rem !important;
+  font-weight: 300 !important;
+  line-height: 1 !important;
+}
+
+#body .nav.nav-next::before {
+  content: "›" !important;
+  font-size: 3rem !important;
+  font-weight: 300 !important;
+  line-height: 1 !important;
+}
+
+#body .nav i {
+  display: none !important;
+}
+

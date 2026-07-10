@@ -91,13 +91,3 @@ Attending this **single half-day event** (four sessions back to back) complement
 
 - Scalable design starts with clear requirements and service boundaries, not only choosing popular AWS products.
 - DevOps and enterprise culture both reward consistency, automation, and clear communication across teams.
-
-#### Some photos from the event
-
-<div class="event-photo-gallery">
-  <img src="/images/event2/event2-photo1.jpg" alt="Event 2 - Session Presentation">
-  <img src="/images/event2/event2-photo2.jpg" alt="Event 2 - LinkedIn Connection">
-  <img src="/images/event2/event2-photo3.jpg" alt="Event 2 - QR Preview">
-  <img src="/images/event2/event2-photo4.jpg" alt="Event 2 - Speaker Presentation">
-  <img src="/images/event2/event2-photo5.jpg" alt="Event 2 - Session Talk">
-</div>
