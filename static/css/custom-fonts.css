@@ -6,7 +6,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 20px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14,8 +14,8 @@ html {
 
 body {
   font-family: var(--body-font);
-  font-size: 1.02rem;
-  line-height: 1.65;
+  font-size: 1.1rem;
+  line-height: 1.75;
 }
 
 /* Content area spacing & readability */
@@ -26,6 +26,17 @@ body {
 #body-inner p,
 #body-inner li {
   letter-spacing: 0.1px;
+  font-size: 1.1rem;
+}
+
+#body-inner strong,
+#body-inner b {
+  font-size: 1.1rem;
+}
+
+#body-inner ul,
+#body-inner ol {
+  font-size: 1.1rem;
 }
 
 /* Headings */
@@ -37,34 +48,66 @@ body {
   letter-spacing: -0.2px;
 }
 
+#body-inner h1 {
+  font-size: 2.75rem;
+}
+
+#body-inner h2 {
+  font-size: 2.25rem;
+}
+
+#body-inner h3 {
+  font-size: 1.85rem;
+}
+
+#body-inner h4 {
+  font-size: 1.5rem;
+}
+
+#body-inner h5 {
+  font-size: 1.25rem;
+}
+
 /* Code blocks */
 code,
 pre,
 tt {
   font-family: var(--mono-font);
-  font-size: 0.95em;
+  font-size: 1em;
 }
 
 /* Tables (worklog) */
 table {
-  font-size: 0.98em;
+  font-size: 1.15em;
 }
 
 table th {
   font-weight: 600;
+  color: #000 !important;
+  background-color: #f7f7f7 !important;
+  font-size: 1.05em;
 }
 
 table td,
 table th {
-  line-height: 1.45;
+  line-height: 1.5;
+  padding: 8px 10px;
 }
 
 /* Event photo gallery – thumbnails in a horizontal row, wrap when needed */
 .event-photo-gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
   margin: 1rem 0 1.25rem;
+}
+
+.event-photo-gallery img {
+  max-width: 140px;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 /* Profile avatar on home page */
@@ -76,4 +119,97 @@ table th {
   margin: 1rem 0 1.25rem;
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Sidebar menu and shortcuts font size */
+#sidebar-footer,
+#sidebar .shortcuts,
+#sidebar .shortcuts li,
+#sidebar .shortcuts a,
+#sidebar-footer a,
+#sidebar-footer span {
+  font-size: 1.5rem !important;
+  line-height: 1.6 !important;
+}
+
+/* Language selector and Clear History */
+#sidebar select,
+#sidebar .footermargin,
+#sidebar .clear-history,
+.select-style select,
+#sidebar-footer .footermargin a,
+#sidebar-footer .footermargin span {
+  font-size: 1.4rem !important;
+}
+
+/* Additional selectors for footer items */
+.footermargin,
+.footermargin a,
+.footermargin span,
+.footermargin * {
+  font-size: 1.4rem !important;
+}
+
+/* Sidebar navigation items */
+#sidebar ul.topics > li > a,
+#sidebar ul.topics li,
+#sidebar ul.topics li a {
+  font-size: 1.15rem !important;
+}
+
+/* Sub-menu items (Week 1, Week 2, etc.) - smaller size */
+#sidebar ul.topics li ul li a,
+#sidebar .dd-list li a,
+#sidebar ul li ul li a {
+  font-size: 0.85rem !important;
+  line-height: 1.5 !important;
+}
+
+/* Chapter titles in sidebar - make them as big as main content */
+#sidebar ul.topics > li.parent > a,
+#sidebar ul.topics > li > a {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+}
+
+/* Sidebar chapter/section headers */
+#sidebar .dd-item > button,
+#sidebar h1,
+#sidebar h2,
+#sidebar h3 {
+  font-size: 1.15rem !important;
+}
+
+/* Force larger font for AWS Study Group link */
+#sidebar #shortcuts a,
+#sidebar #shortcuts li a,
+#sidebar ul.shortcuts li a,
+a[href*="awsstudygroupfcj"],
+#sidebar-footer .shortcuts a,
+#sidebar-footer .shortcuts li a {
+  font-size: 1.15rem !important;
+}
+
+/* Force larger font for Clear History */
+#sidebar #clear-history,
+#sidebar a[onclick*="clearHistory"],
+.footermargin a[onclick],
+a[onclick*="clearHistory"],
+#sidebar-footer .footermargin a,
+#sidebar-footer a,
+#sidebar-footer .footermargin a span,
+#sidebar-footer i + * {
+  font-size: 1.15rem !important;
+}
+
+/* Target the clear history icon and text */
+#sidebar-footer .footermargin:last-child,
+#sidebar-footer .footermargin:last-child a,
+#sidebar-footer .footermargin:last-child * {
+  font-size: 1.15rem !important;
+}
+
+/* Sidebar footer styling */
+#sidebar-footer {
+  display: block;
 }
