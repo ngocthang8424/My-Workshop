@@ -1,7 +1,7 @@
 ---
 title: "Storage"
 date: 2026-07-18
-weight: 14
+weight: 4
 chapter: false
 pre: "<b>5.4. </b>"
 ---

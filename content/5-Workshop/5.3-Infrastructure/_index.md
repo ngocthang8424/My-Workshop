@@ -1,7 +1,7 @@
 ---
 title: "Infrastructure"
 date: 2026-07-18
-weight: 13
+weight: 3
 chapter: false
 pre: "<b>5.3. </b>"
 ---

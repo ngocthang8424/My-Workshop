@@ -1,7 +1,7 @@
 ---
 title: "Deployment"
 date: 2026-07-18
-weight: 19
+weight: 9
 chapter: false
 pre: "<b>5.9. </b>"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Observability"
 date: 2026-07-18
-weight: 18
+weight: 8
 chapter: false
 pre: "<b>5.8. </b>"
 ---

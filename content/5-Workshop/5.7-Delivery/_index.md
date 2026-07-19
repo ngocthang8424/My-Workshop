@@ -1,7 +1,7 @@
 ---
 title: "Delivery"
 date: 2026-07-18
-weight: 17
+weight: 7
 chapter: false
 pre: "<b>5.7. </b>"
 ---
