@@ -1,6 +1,6 @@
 ---
 title: "Sự kiện 2"
-date: 2026-06-12
+date: 2026-06-13
 weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
@@ -8,7 +8,7 @@ pre: " <b> 4.2. </b> "
 
 # Bài thu hoạch Sự kiện chia sẻ – Hành trình Cloud, kiến trúc mở rộng & DevOps
 
-**Ngày & giờ:** 9:00 – 12:00, 12/06/2026
+**Ngày & giờ:** 9:00 – 12:00, 13/06/2026
 
 Một sự kiện buổi sáng gồm **bốn session liên tiếp** (Session 1 → Session 4) trong cùng chương trình.
 

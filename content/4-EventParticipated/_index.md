@@ -14,9 +14,9 @@ Below are the events that I have participated in during the internship / Workfor
 
 &emsp;**Event Name:** Student Meetup – AWS Services & Hackathon Program
 
-&emsp;**Date & Time:** *(update with exact date and time)*
+&emsp;**Date & Time:** May 30, 2026
 
-&emsp;**Location:** *(update with venue if applicable)*
+&emsp;**Location:** AWS Vietnam Office / Online
 
 &emsp;**Role:** Attendee
 
@@ -28,10 +28,10 @@ Below are the events that I have participated in during the internship / Workfor
 
 &emsp;**Event Name:** Speaker Session – Cloud Journey, Scalable Architecture & DevOps
 
-&emsp;**Date & Time:** 9:00 – 12:00, 12/06/2026
+&emsp;**Date & Time:** 9:00 – 12:00, June 13, 2026
 
-&emsp;**Location:** *(update with venue if applicable)*
+&emsp;**Location:** AWS Vietnam Office / Online
 
 &emsp;**Role:** Attendee
 
-&emsp;**Summary:** One half-day event (12/06/2026, 9:00 – 12:00) with four sessions: **Session 1** – **Danh Hoang Hieu Nghi** (FCAJ to AWS Partner); **Session 2** – **Dinh Trung Kien** & **Nguyen Minh Tho** (scalable URL shortener on AWS); **Session 3** – **Mr. Cuong Nguyen** (enterprise culture); **Session 4** – **Truong Hoang Trong** (DevOps Engineer).
+&emsp;**Summary:** One half-day event (June 13, 2026, 9:00 – 12:00) with four sessions: **Session 1** – **Danh Hoang Hieu Nghi** (FCAJ to AWS Partner); **Session 2** – **Dinh Trung Kien** & **Nguyen Minh Tho** (scalable URL shortener on AWS); **Session 3** – **Mr. Cuong Nguyen** (enterprise culture); **Session 4** – **Truong Hoang Trong** (DevOps Engineer).

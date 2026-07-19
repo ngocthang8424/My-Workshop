@@ -1,6 +1,6 @@
 ---
 title: "Event 2"
-date: 2026-06-12
+date: 2026-06-13
 weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
@@ -8,7 +8,7 @@ pre: " <b> 4.2. </b> "
 
 # Summary Report: Speaker Session – Cloud Journey, Scalable Architecture & DevOps
 
-**Date & Time:** 9:00 – 12:00, 12/06/2026
+**Date & Time:** 9:00 – 12:00, June 13, 2026
 
 One half-day event with **four consecutive sessions** (Session 1 → Session 4) in the same program.
 
