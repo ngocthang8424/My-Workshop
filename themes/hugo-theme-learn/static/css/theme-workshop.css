@@ -111,9 +111,31 @@ a:hover {
   border-color: var(--MENU-SECTION-HR-color);
 }
 
-#sidebar ul li.visited > a .read-icon {
-  color: var(--MENU-VISITED-color);
+/* === Visited Checkmark === */
+
+/* Override base theme: hide read-icon by default */
+#sidebar ul li .read-icon,
+#sidebar ul li > a .read-icon {
+  display: none !important;
 }
+
+/* Show checkmark ONLY when li has .visited class */
+#sidebar ul li.visited > a .read-icon {
+  display: block !important;
+  float: right;
+  color: #00d4aa !important;
+  font-size: 13px;
+  margin: 2px 6px 0 auto;
+  filter: drop-shadow(0 0 5px rgba(0, 212, 170, 0.7));
+  animation: checkmark-bounce 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes checkmark-bounce {
+  0%   { transform: scale(0.3); opacity: 0; }
+  70%  { transform: scale(1.25); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
 
 /* --- Input Focus --- */
 textarea:focus,

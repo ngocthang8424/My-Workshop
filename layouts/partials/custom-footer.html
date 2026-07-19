@@ -1,35 +1,79 @@
 <script>
 (function ($) {
-  function normalizePath(value) {
+  function getBasePath() {
+    if (typeof baseurl === "undefined" || !baseurl) return "";
+    try {
+      return new URL(baseurl, window.location.origin).pathname.replace(/\/$/, "") || "";
+    } catch (e) {
+      return baseurl.replace(/^https?:\/\/[^/]+/, "").replace(/\/$/, "") || "";
+    }
+  }
+
+  function normalizeNavPath(value) {
     if (!value) return "";
     try {
-      return (value.indexOf("://") > -1 ? new URL(value).pathname : value)
-        .replace(/\/$/, "") || "/";
+      var path = value.indexOf("://") > -1 ? new URL(value).pathname : value;
+      path = path.replace(/\/$/, "") || "/";
+      var basePath = getBasePath();
+      if (basePath && basePath !== "/" && path.indexOf(basePath) === 0) {
+        path = path.slice(basePath.length) || "/";
+      }
+      return path.replace(/\/$/, "") || "/";
     } catch (e) {
       return value.replace(/\/$/, "") || "/";
     }
   }
 
-  function markVisitedLinks() {
-    var currentUrl = $("body").attr("data-url");
-    if (currentUrl) {
-      sessionStorage.setItem(currentUrl, 1);
-    }
+  function getCurrentNavId() {
+    var activeNavId = $("#sidebar li.active").attr("data-nav-id");
+    if (activeNavId) return activeNavId;
+    return normalizeNavPath($("body").attr("data-url"));
+  }
 
+  function markPageVisited(navId) {
+    if (!navId) return;
+    var key = normalizeNavPath(navId);
+    var links = JSON.parse(localStorage.getItem("visited-links") || "{}");
+    links[key] = 1;
+    localStorage.setItem("visited-links", JSON.stringify(links));
+    $("[data-nav-id]").each(function () {
+      if (normalizeNavPath($(this).attr("data-nav-id")) === key) {
+        $(this).addClass("visited");
+      }
+    });
+  }
+
+  function markVisitedLinks() {
+    markPageVisited(getCurrentNavId());
+
+    var links = JSON.parse(localStorage.getItem("visited-links") || "{}");
     $("[data-nav-id]").each(function () {
       var $item = $(this);
-      var navId = $item.attr("data-nav-id");
-      var navPath = normalizePath(navId);
-
-      for (var key in sessionStorage) {
-        if (sessionStorage.getItem(key) != 1) continue;
-        if (key === navId || normalizePath(key) === navPath) {
+      var navPath = normalizeNavPath($item.attr("data-nav-id"));
+      for (var url in links) {
+        if (links[url] != 1) continue;
+        if (normalizeNavPath(url) === navPath) {
           $item.addClass("visited");
           break;
         }
       }
     });
   }
+
+  window.markCurrentPageVisited = function () {
+    markPageVisited(getCurrentNavId());
+  };
+
+  $(document).ready(function () {
+    $(".nav-prev, .nav-next").on("click", function () {
+      markPageVisited(getCurrentNavId());
+    });
+
+    $("#sidebar a[href]").on("click", function () {
+      var navId = $(this).closest("[data-nav-id]").attr("data-nav-id");
+      markPageVisited(navId);
+    });
+  });
 
   $(window).on("load", markVisitedLinks);
 })(jQuery);

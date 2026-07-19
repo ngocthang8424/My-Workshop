@@ -109,6 +109,7 @@ jQuery(document).ready(function () {
   });
   jQuery("[data-clear-history-toggle]").on("click", function () {
     sessionStorage.clear();
+    localStorage.removeItem("visited-links");
     location.reload();
     return false;
   });
@@ -231,12 +232,32 @@ jQuery(document).ready(function () {
     }
   });
 
+  // Helper: mark current page as visited in localStorage
+  function markCurrentPageVisited() {
+    if (typeof window.markCurrentPageVisited === "function") {
+      window.markCurrentPageVisited();
+      return;
+    }
+
+    var url =
+      jQuery("#sidebar li.active").attr("data-nav-id") ||
+      jQuery("body").attr("data-url");
+    if (url) {
+      var links = JSON.parse(localStorage.getItem("visited-links") || "{}");
+      links[url] = 1;
+      localStorage.setItem("visited-links", JSON.stringify(links));
+      jQuery('[data-nav-id="' + url + '"]').addClass("visited");
+    }
+  }
+
   // allow keyboard control for prev/next links
   jQuery(function () {
     jQuery(".nav-prev").click(function () {
+      markCurrentPageVisited();
       location.href = jQuery(this).attr("href");
     });
     jQuery(".nav-next").click(function () {
+      markCurrentPageVisited();
       location.href = jQuery(this).attr("href");
     });
   });
@@ -251,11 +272,13 @@ jQuery(document).ready(function () {
   jQuery(document).keydown(function (e) {
     // prev links - left arrow key
     if (e.which == "37") {
+      markCurrentPageVisited();
       jQuery(".nav.nav-prev").click();
     }
 
     // next links - right arrow key
     if (e.which == "39") {
+      markCurrentPageVisited();
       jQuery(".nav.nav-next").click();
     }
   });
@@ -392,14 +415,28 @@ jQuery(window).on("load", function () {
     adjustForScrollbar();
   });
 
-  // store this page in session
-  sessionStorage.setItem(jQuery("body").data("url"), 1);
+  // Restore visited links from localStorage
+  var visitedLinks = JSON.parse(localStorage.getItem("visited-links") || "{}");
 
-  // loop through the sessionStorage and see if something should be marked as visited
-  for (var url in sessionStorage) {
-    if (sessionStorage.getItem(url) == 1)
-      jQuery('[data-nav-id="' + url + '"]').addClass("visited");
+  // Mark current page as visited
+  var currentUrl =
+    jQuery("#sidebar li.active").attr("data-nav-id") ||
+    jQuery("body").attr("data-url");
+  if (currentUrl) {
+    visitedLinks[currentUrl] = 1;
+    localStorage.setItem("visited-links", JSON.stringify(visitedLinks));
   }
+
+  // Apply visited class to all previously visited nav items
+  jQuery.each(visitedLinks, function (url, val) {
+    if (val != 1) return;
+    jQuery("[data-nav-id]").each(function () {
+      var navId = jQuery(this).attr("data-nav-id");
+      if (navId === url || navId.replace(/\/$/, "") === url.replace(/\/$/, "")) {
+        jQuery(this).addClass("visited");
+      }
+    });
+  });
 
   $(".highlightable").highlight(sessionStorage.getItem("search-value"), {
     element: "mark",
