@@ -10,7 +10,7 @@ pre: " <b> 1.7. </b> "
 * Làm chủ AWS Cloud Development Kit (CDK) - công cụ Infrastructure as Code thế hệ mới.
 * Thực hành triển khai hạ tầng AWS bằng code với CDK (TypeScript/Python).
 * Tối ưu hóa chi phí EC2 thông qua phân tích Right-Sizing và Compute Optimizer.
-* Xác định và đề xuất dự án tốt nghiệp: **Upscale AI Platform** - Nền tảng nâng cấp ảnh bằng AI trên AWS.
+* Xác định và đề xuất dự án thực tập: **Upscale AI Platform** - Nền tảng nâng cấp ảnh bằng AI trên AWS.
 
 ### Các công việc cần triển khai trong tuần này
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
@@ -19,7 +19,7 @@ pre: " <b> 1.7. </b> "
 | 3 | AWS CDK Nâng cao:<br>- Làm việc với Constructs L1, L2, L3.<br>- Tạo multi-stack application với cross-stack references.<br>- Áp dụng CDK Context, Parameters, và Outputs.<br>- Best practices: tagging, naming conventions. | 29/05/2026 | 29/05/2026 | AWS CDK Workshop |
 | 4 | Infrastructure as Code Workshop Series:<br>- So sánh CloudFormation vs CDK vs Terraform.<br>- Quản lý infrastructure drift detection.<br>- Tích hợp IaC vào CI/CD pipeline.<br>- Rollback strategies và stack updates. | 30/05/2026 | 30/05/2026 | AWS IaC Best Practices |
 | 5 | EC2 Right-Sizing và Cost Optimization:<br>- Phân tích CloudWatch metrics (CPU, Memory, Network).<br>- Sử dụng AWS Compute Optimizer để đề xuất instance types.<br>- Tính toán tiết kiệm chi phí khi right-sizing.<br>- Lên kế hoạch migration instance types. | 31/05/2026 | 31/05/2026 | AWS Compute Optimizer Guide |
-| 6 | Đề xuất dự án tốt nghiệp - Upscale AI:<br>- Xác định yêu cầu chức năng: upload ảnh, xử lý AI (Real-ESRGAN), theo dõi tiến trình.<br>- Thiết kế kiến trúc: Frontend (S3+CloudFront), Backend (ECS+EC2), AI Processing (GPU), Storage (S3+EFS).<br>- Lên danh sách AWS services: VPC, ECS, EC2, S3, EFS, CloudFront, ALB, ElastiCache, SQS, WAF. | 01/06/2026 | 02/06/2026 | Project Proposal Document |
+| 6 | Đề xuất dự án thực tập - Upscale AI:<br>- Xác định yêu cầu chức năng: upload ảnh, xử lý AI (Real-ESRGAN), theo dõi tiến trình.<br>- Thiết kế kiến trúc: Frontend (S3+CloudFront), Backend (ECS+EC2), AI Processing (GPU), Storage (S3+EFS).<br>- Lên danh sách AWS services: VPC, ECS, EC2, S3, EFS, CloudFront, ALB, ElastiCache, SQS, WAF. | 01/06/2026 | 02/06/2026 | Project Proposal Document |
 
 ### Kết quả đạt được tuần 7
 
