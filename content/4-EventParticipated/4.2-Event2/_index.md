@@ -85,7 +85,7 @@ Attending this **single half-day event** (four sessions back to back) complement
 #### Community and motivation
 
 - Four sessions in one morning reinforced that cloud careers combine technical depth, culture, and delivery discipline.
-- Q&A and discussion helped relate speaker topics to capstone work.
+- Q&A and discussion helped relate speaker topics to internship project work.
 
 #### Lessons learned
 

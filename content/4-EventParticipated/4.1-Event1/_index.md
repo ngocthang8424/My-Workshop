@@ -27,7 +27,7 @@ pre: " <b> 4.1. </b> "
 #### Opening session – AWS services (Huynh Thai Linh, HUTECH)
 
 - Overview of commonly used AWS services in learning and project work (compute, storage, networking, security).
-- How AWS services connect to hands-on labs, workshops, and capstone-style projects in the bootcamp.
+- How AWS services connect to hands-on labs, workshops, and internship-style projects in the bootcamp.
 - Tips for choosing services by use case and avoiding common beginner mistakes (cost, permissions, region).
 
 #### Student speaker segment – Hackathon program (English)
@@ -60,7 +60,7 @@ pre: " <b> 4.1. </b> "
 
 ### Applying to Work
 
-- Apply AWS service selection principles when designing the capstone architecture.
+- Apply AWS service selection principles when designing the internship project architecture.
 - Plan Hackathon participation with defined roles, milestones, and service boundaries aligned with bootcamp skills.
 - Practice short technical presentations in English for demos and progress reviews.
 

@@ -7,7 +7,7 @@ pre: " <b> 1.11. </b> "
 ---
 
 ### Week 11 Objectives
-* Continue perfecting the capstone project implementation.
+* Continue perfecting the internship project implementation.
 * Deploy the web application to AWS infrastructure.
 * Prepare and complete event participation report.
 * Develop and deliver workshop materials and content.

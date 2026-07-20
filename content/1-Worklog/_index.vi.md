@@ -18,11 +18,11 @@ pre: " <b> 1. </b> "
 
 **Tuần 6:** [Quản lý tài nguyên bằng Tags, IAM Policies, Session Manager và CloudFormation](1.6-week6/)
 
-**Tuần 7:** [AWS CDK, Infrastructure as Code Workshop và khởi động dự án tốt nghiệp](1.7-week7/)
+**Tuần 7:** [AWS CDK, Infrastructure as Code Workshop và khởi động dự án thực tập](1.7-week7/)
 
 **Tuần 8:** [VPC Flow Logs, quản lý chi phí, Service Quotas và tự động hóa backup EBS](1.8-week8/)
 
-**Tuần 9:** [AWS Toolkit, IAM Identity Center (SSO) và thiết kế kiến trúc dự án tốt nghiệp](1.9-week9/)
+**Tuần 9:** [AWS Toolkit, IAM Identity Center (SSO) và thiết kế kiến trúc dự án thực tập](1.9-week9/)
 
 **Tuần 10:** [IAM Permission Boundaries, Policies nâng cao và bảo mật cho dự án](1.10-week10/)
 

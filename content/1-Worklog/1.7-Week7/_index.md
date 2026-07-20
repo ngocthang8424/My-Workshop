@@ -11,7 +11,7 @@ pre: " <b> 1.7. </b> "
 * Apply CDK constructs, stacks, and deployment workflows from essentials through advanced patterns.
 * Complete hands-on labs from the Infrastructure as Code Workshop Series.
 * Optimize EC2 workloads using right-sizing and resource utilization analysis.
-* Kick off the end-of-semester capstone project (goals, architecture, and AWS services scope).
+* Kick off the internship project (goals, architecture, and AWS services scope).
 
 ### Tasks carried out this week
 | Day | Task | Start Date | Completion Date | Reference Material |
@@ -29,17 +29,17 @@ pre: " <b> 1.7. </b> "
 * Learned advanced CDK patterns for modular infrastructure and environment-specific configuration.
 * Reinforced IaC principles: versioned templates, repeatable deploys, and controlled change management.
 * Understood EC2 right-sizing signals and how optimization supports cost and performance goals.
-* Aligned capstone scope with skills from prior weeks (networking, security, automation, monitoring).
+* Aligned internship project scope with skills from prior weeks (networking, security, automation, monitoring).
 
 **Hands-on skills**
 * **CDK Essentials:** Bootstrapped an account/region, synthesized templates, and deployed a first CDK stack.
 * **CDK Advanced:** Structured multi-stack apps, used constructs/parameters, and applied deployment conventions.
 * **IaC workshops:** Practiced end-to-end define â†’ deploy â†’ update workflows with rollback awareness.
 * **EC2 optimization:** Used metrics and recommendations to evaluate instance sizing and utilization.
-* **Capstone:** Defined project goals, architecture, and AWS services for the final deliverable.
+* **Internship project:** Defined project goals, architecture, and AWS services for the final deliverable.
 
 **Problem solving**
 * Resolved CDK bootstrap or IAM permission errors during first-time deploy.
 * Fixed synthesis/deploy failures from construct props, asset paths, or region/account mismatches.
 * Interpreted noisy or insufficient CloudWatch metrics when evaluating right-sizing candidates.
-* Outlined capstone scope into clear milestones and a minimal viable architecture.
+* Outlined internship project scope into clear milestones and a minimal viable architecture.

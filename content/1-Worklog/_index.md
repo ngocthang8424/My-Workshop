@@ -18,11 +18,11 @@ pre: " <b> 1. </b> "
 
 **Week 6:** [Resource management with Tags, IAM Policies, Session Manager and CloudFormation](1.6-week6/)
 
-**Week 7:** [AWS CDK, Infrastructure as Code Workshop and capstone project kickoff](1.7-week7/)
+**Week 7:** [AWS CDK, Infrastructure as Code Workshop and internship project kickoff](1.7-week7/)
 
 **Week 8:** [VPC Flow Logs, cost management, Service Quotas and EBS backup automation](1.8-week8/)
 
-**Week 9:** [AWS Toolkit, IAM Identity Center (SSO) and capstone project architecture design](1.9-week9/)
+**Week 9:** [AWS Toolkit, IAM Identity Center (SSO) and internship project architecture design](1.9-week9/)
 
 **Week 10:** [IAM Permission Boundaries, advanced Policies and project security](1.10-week10/)
 
