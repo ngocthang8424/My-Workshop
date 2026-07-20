@@ -7,44 +7,44 @@ pre: " <b> 1.8. </b> "
 ---
 
 ### Mục tiêu tuần 8
-* Theo dõi và giám sát lưu lượng mạng VPC bằng tính năng VPC Flow Logs, sau đó bắt tay vào phân tích dữ liệu dòng chảy mạng.
-* Cấp quyền ủy nhiệm an toàn vào trang quản lý thanh toán (billing console) để có cái nhìn tổng quan về chi phí và vận hành tài khoản chung.
-* Quản lý các giới hạn sử dụng và hạn mức của dịch vụ AWS thông qua Service Quotas.
-* Theo dõi và phân tích chi tiêu với các công cụ quản lý chi phí chuyên dụng (Cost and Usage Management).
-* Tự động khởi tạo các bản sao lưu (snapshots) ổ đĩa EBS nhờ công cụ quản lý chu kỳ sống của dữ liệu (Data Lifecycle Manager - DLM).
-* Phát hiện những hoạt động backup bị bất thường từ mạng bằng ứng dụng đánh giá sự cố ngoại lai khi backup EBS (anomaly detection).
-* Tiếp tục xây dựng dự án đồ án tốt nghiệp cuối kì.
+* Giám sát và phân tích lưu lượng mạng với VPC Flow Logs.
+* Quản lý quyền truy cập Billing Console thông qua IAM policies.
+* Làm chủ AWS Service Quotas để quản lý giới hạn dịch vụ.
+* Tối ưu hóa chi phí với AWS Cost Explorer và Cost Management tools.
+* Tự động hóa backup EBS với Data Lifecycle Manager (DLM).
+* Bắt đầu triển khai hạ tầng nền tảng cho dự án Upscale AI.
 
 ### Các công việc cần triển khai trong tuần này
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 2 | Giám sát Mạng bằng VPC Flow Logs:<br>- Bật chức năng VPC Flow Logs trên cả không gian mạng lưới VPC hay giới hạn trong phạm vi ngách mạng subnet.<br>- Đẩy nhật ký thu thập (logs) tới CloudWatch Logs hoặc S3, sau đó phân tích các luồng truy cập được thông qua (accepted) hoặc phân phát chặn (rejected).<br>- Tái dụng lại kết xuất của flow records vào mục đích xác định nguyên cớ ngắt hỏng dòng mạng từ rules bên Security Group. | 03/06/2026 | 03/06/2026 | Amazon VPC Flow Logs User Guide |
-| 3 | Ủy Quyền Billing Console:<br>- Viết định dạng IAM policies phục vụ phân quyền theo dõi chi trả, giá thành.<br>- Giao phó, xác lập quyền hiển thị billing console riêng tới 1 role hay một user trực thuộc có xác thực độ tin cậy được ủy quyền.<br>- Đánh giá quyền tối thiểu chi li đủ thấy bảng sao kê ngân sách, cách thanh toán hóa đơn. | 04/06/2026 | 04/06/2026 | AWS Billing and Cost Management |
-| 4 | Kìm Giới Hạn Hạn Mức Thông Qua Quản Lí Service Quotas:<br>- Truy xuất hạn lượng định chuẩn của những dịch vụ máy chủ lớn (EC2, Lambda, VPC...).<br>- Lập đơn đề bạt xin thêm năng lực sử dụng phần ngọn trong những nhu cầu cần quá ngưỡng của dự án.<br>- Không ngừng đánh giá việc hụt ngạch quota ảnh hưởng lỗi truy xuất lúc cần. | 05/06/2026 | 05/06/2026 | AWS Service Quotas User Guide |
-| 5 | Quản Trị Hệ Việc Quản Khống Và Báo Cáo Kế Toán Chi:(Cost and Usage Management):<br>- Thám hiểm cơ sở Cost Explorer, thử ứng dụng báo cáo thẻ phân hệ tiền cước.<br>- Lục báo cáo thói quen để rà lọt được top phân hạng ngốn tài nguyên tài chính nhất.<br>- Đóng bộ quy chuẩn làm quen với cảnh báo vượt lạm. | 06/06/2026 | 06/06/2026 | AWS Cost Management Documentation |
-| 6 | Tự động hóa backup EBS và quá trình dự án cuối kĩ:<br>- Khởi động chức năng thiết lập chính sách quy trình vòng xoáy định mệnh DLM (lifecycle policies) cho kịch bản backup rập khuôn ảnh gốc EBS.<br>- Trang bị phần ngoại lệ dò tìm dị thường tín hiệu trên nhịp hành vi backup EBS.<br>- Áp dụng những điều này trực thuộc việc tái cấu trúc hoàn chỉnh dự án tổng hợp đồ án tốt nghiệp. | 07/06/2026 | 08/06/2026 | Amazon EBS / Data Lifecycle Manager |
+| 2 | VPC Flow Logs và Network Monitoring:<br>- Bật VPC Flow Logs ở VPC và subnet level.<br>- Gửi logs đến CloudWatch Logs và S3.<br>- Phân tích accepted/rejected connections.<br>- Troubleshoot security group rules bằng flow logs. | 03/06/2026 | 03/06/2026 | VPC Flow Logs User Guide |
+| 3 | Billing Console Access Management:<br>- Tạo IAM policies cho billing access (ViewBilling, ViewUsage).<br>- Delegate billing access cho IAM users/roles.<br>- Thiết lập least-privilege access cho cost management. | 04/06/2026 | 04/06/2026 | AWS Billing IAM Policies |
+| 4 | AWS Service Quotas Management:<br>- Kiểm tra quotas của EC2, VPC, ECS, Lambda.<br>- Request quota increases cho dự án.<br>- Thiết lập CloudWatch alarms cho quota usage. | 05/06/2026 | 05/06/2026 | AWS Service Quotas Guide |
+| 5 | Cost Management và Optimization:<br>- Khám phá AWS Cost Explorer với filtering và grouping.<br>- Tạo custom cost reports theo tags.<br>- Phân tích top cost drivers.<br>- Thiết lập budget alerts. | 06/06/2026 | 06/06/2026 | AWS Cost Management |
+| 6 | EBS Backup Automation và Project Infrastructure:<br>- Thiết lập DLM lifecycle policies cho EBS snapshots.<br>- Configure retention rules và cross-region copy.<br>- Bắt đầu triển khai VPC cho dự án Upscale AI: tạo VPC với public/private subnets, NAT Gateway, Security Groups. | 07/06/2026 | 08/06/2026 | DLM User Guide |
 
 ### Kết quả đạt được tuần 8
 
 **Kiến thức**
-* Mường tượng cấu trúc bắt IP traffic của hệ bảo mật VPC Flow Logs cùng cơ chế giúp giám sát viên rò đường bế tắc trên mạng lưới.
-* Học mô chuẩn giao phó trọng trách hóa đơn nhằm thắt gút truy xuất IAM tới khâu giao diện tài chính.
-* Tiếp nhận kiến thức vận dụng Service Quotas coi như đại sảnh trung tâm hiển thị trần giới hạn cũng như nhận và gửi phản hồi yều cần vượt trần.
-* Củng cố chặt tầm quan sát tiền cước với các công cụ giám trắc Cost Explorer hay báo cáo cước tích lũy.
-* Chiếu sáng luồng tư duy backup lưu kho thông qua DLM (EBS snapshot automation).
+* Hiểu cách VPC Flow Logs capture network traffic và cách phân tích flow records để troubleshoot connectivity issues.
+* Nắm được IAM policies cho billing access và best practices cho cost governance.
+* Hiểu cách AWS Service Quotas hoạt động và process để request increases.
+* Thành thạo AWS Cost Explorer để phân tích chi phí theo dimensions (service, region, tags).
+* Hiểu lifecycle management cho EBS snapshots với DLM policies.
 
 **Kỹ năng thực hành**
-* **VPC Flow Logs:** Thiết lập được mạng dò báo log luồng đi, xem qua lại record, liên đới tính phân tích qua lại với mảng bảo mật bảo hiến Security Group và tầng NACLs.
-* **Cấp quyền tài chính (Billing delegation):** Phóng tạo mẫu policies trong IAM ghim chết được ai có thể tới khâu giao dịch chi ngân (billing console).
-* **Service Quotas:** Dò số liệu ngưỡng trần (quotas), chủ động trình giấy gọi gia hạn, quy khoanh tài nguyên hợp ngạch cấp trong một giới hạn có sắp xếp.
-* **Cost management:** Phác được lượng phân tích tiền thuế cũng như định hình được phương trời hỗ trợ vạch ngân sách ra đề.
-* **EBS backups:** Kéo thiết lập chu trình vòng lưu chuyển (DLM policies), và duyệt đọc định hình dạng ngoại lai có liên quan đến việc backup.
-* **Đề Đạt Đồ Án Kì:** Áp đặt bước tiến ứng dụng bằng việc gom tính năng quản trị giám sát, chi phí tài chính cùng vận định thói quen backup từ đầu ngày qua thẳng hệ thống đồ án.
+* **VPC Flow Logs:** Thiết lập flow logs, query logs trong CloudWatch Insights, phát hiện suspicious traffic patterns.
+* **Billing Access:** Tạo IAM policies với điều kiện (conditions) để control billing access một cách an toàn.
+* **Service Quotas:** Monitoring quota usage, request increases, và plan capacity cho dự án.
+* **Cost Analysis:** Sử dụng Cost Explorer để identify cost optimization opportunities, tạo monthly cost reports.
+* **EBS Automation:** Thiết lập DLM policies với daily/weekly schedules và retention policies.
+* **Project VPC:** Triển khai VPC infrastructure cho Upscale AI với proper network segmentation (public/private subnets).
 
 **Giải quyết vấn đề**
-* Khắc chế biểu chứng thất tán mất log tại không báo về kho bằng cách tái coi lại IAM roles đích hướng trả log từ cụm thu nhập cấu hình chắp đoạn ngắt liên tiếp (aggregation intervals).
-* Giải lỗi kẹt quyền hạn tại sổ sách do xỉn quyền sai lệch và khai kích billing hụt từ thẻ (activation).
-* Trị thành tựu báo mã lỗi giới hạn deploy (deploy failures) bắt phải yêu cầu (request adjustments) hạn mức trần.
-* Ổn định và tinh thông mảng lịch hẹn (DLM schedules)/ giữ lệnh bảo lưu tài nguyên theo nhu cầu, điều tiết được tài nguyên lưu cũng như tối hóa độ phục hồi tương thích giá của thiết bị lưu trữ.
+* Fix lỗi VPC Flow Logs không gửi data đến CloudWatch do missing IAM role permissions.
+* Troubleshoot billing console access denied bằng cách thêm `aws-portal:ViewBilling` permission.
+* Xử lý quota limit errors khi deploy nhiều EC2 instances bằng cách request increase.
+* Optimize DLM schedules để balance giữa data protection và storage costs.
+* Thiết kế VPC CIDR blocks để tránh overlap và đảm bảo đủ IP addresses cho scaling.
 
 

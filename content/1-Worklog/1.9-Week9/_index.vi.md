@@ -7,41 +7,49 @@ pre: " <b> 1.9. </b> "
 ---
 
 ### Mục tiêu tuần 9
-* Cài đặt môi trường lập trình (development environment) bằng công cụ bổ trợ AWS Toolkit cho VS Code.
-* Nghiên cứu tính đồng bộ danh tính người dùng và các biểu đồ cấp quyền với dịch vụ trung tâm thẻ nhận diện IAM (AWS IAM Identity Center - SSO).
-* Đúc kết bản sao thiết kế và biểu diễn họa đồ chi tiết cụm kiến trúc kiến thiết hạ tầng dự án tốt nghiệp (capstone project architecture diagram).
-* Tiếp tục hoàn chỉnh và lập vòng lặp nâng cao những phân loại mô-đun để tiến tới kỳ tích cho dự án (Capstone) vào thời hạn chót cuối kỳ.
+* Cài đặt và làm quen AWS Toolkit for Visual Studio Code.
+* Triển khai AWS IAM Identity Center (AWS SSO) cho multi-account access.
+* Hoàn thiện thiết kế kiến trúc chi tiết cho dự án Upscale AI.
+* Bắt đầu implement các core components của dự án: ECS cluster, ECR, S3 buckets.
 
 ### Các công việc cần triển khai trong tuần này
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 2 | Khơi môi trường bằng AWS Toolkit trên máy với trình IDE VS Code:<br>- Nhúng gói cài và tinh chỉnh cài đặt bộ AWS Toolkit trong trình VS Code.<br>- Tìm hiểu sâu cách đi tắt thông tin từ máy chạm cấu hình vùng AWS để hiển thị các luồng nhánh resource vây quanh IDE.<br>- Xuất triển khai test báo lỗi (debug), cấu hình code tại serverless cùng quản lý luồng AWS mà chưa cần ra khỏi IDE. | 09/06/2026 | 09/06/2026 | AWS Toolkit for VS Code User Guide |
-| 3 | Đồng hóa quyền nhân danh qua cấu trúc Sign-On của AWS:<br>- Khai thông đường ngạch IAM Identity Center (truyền thống là SSO) phân khu vùng mỏ cấp quản lý cho đối tượng tham gia truy cập chung.<br>- Tái cài định vùng tập cấp quyền (permission sets) cho vùng tài khoản được quy hoạch.<br>- Log thẳng thông qua nhánh liên thông SSO (federated access) trên các hạ tầng trực tiếp AWS cung cấp. | 10/06/2026 | 10/06/2026 | AWS IAM Identity Center Documentation |
-| 4 | Đúc Đồ Hình Tổng Quang cho Đồ Án Cuối Khóa:<br>- Tạo bản đồ ánh xạ hạ tầng frontend/backend cùng quá trình ứng dụng Trí Tuệ Nhân Tạo (AI processing), nền lưu kho và không để quên hệ cảnh giới theo dõi (monitoring layers).<br>- Tầm quét bao quát mọi giới tuyến, chu trình gửi dữ liệu, chặn trạm bảo mật an ninh khu tiếp nhận máy lưu server.<br>- Trình ấn bản họa hình hạ tầng mẫu trọn vẹn cho phần dự án AI Upscaler (Đồ Án Siêu Tăng Kích Ảnh AI). | 11/06/2026 | 11/06/2026 | — |
-| 5 | Tiến Rút Đoạn Kết - Nghiệm Thu Đồ Án Cuối Khóa:<br>- Tiến mạnh đi thẳng vào code cốt lõi từ bảng mẫu họa đồ bản phác.<br>- Đan ghép cơ trạm xác thực đăng nhập (auth), cổng dẫn (API) tới kho tiếp nhận trạm trung chuyển (storage).<br>- Hoàn lại bài cũ và kiểm kê lần lượt những thành quả trước đợt đồ án (như cài mới VPC, rào mạng IAM, rà lỗi log monitor). | 12/06/2026 | 12/06/2026 | — |
-| 6 | Tiếp Tục Nâng Tầm Đồ Án Đích Cuối Kì:<br>- Tạo lực bẩy cho khâu AI học máy (AI processing) luyên mượt mã hậu phương Backend thông tuệ theo dòng truyền việc (workflows).<br>- Giám kịch test tổng toàn hệ từ nguồn tới đích (end-to-end flows).<br>- Định dạng chuẩn lộ trình đọ sát lại thành tích qua mỗi đợt chốt chặn kiểm thu đồ án đã lên lịch sẵn. | 13/06/2026 | 14/06/2026 | — |
+| 2 | AWS Toolkit for VS Code:<br>- Cài đặt và cấu hình AWS Toolkit extension.<br>- Connect đến AWS account và explore resources.<br>- Debug và deploy Lambda functions từ VS Code.<br>- Browse S3, CloudWatch Logs trực tiếp trong IDE. | 09/06/2026 | 09/06/2026 | AWS Toolkit User Guide |
+| 3 | IAM Identity Center (AWS SSO):<br>- Thiết lập IAM Identity Center cho organization.<br>- Tạo permission sets cho different roles.<br>- Configure SSO access cho multiple AWS accounts.<br>- Test federated login workflow. | 10/06/2026 | 10/06/2026 | IAM Identity Center Guide |
+| 4 | Finalize Architecture Design:<br>- Vẽ chi tiết architecture diagram với tất cả components.<br>- Document data flows: upload → processing → download.<br>- Define security boundaries và network segmentation.<br>- List tất cả IAM roles và policies cần thiết. | 11/06/2026 | 11/06/2026 | Architecture Document |
+| 5 | Implement Storage Layer:<br>- Tạo S3 buckets: uploads, processed-images, model-weights.<br>- Configure bucket policies, versioning, lifecycle rules.<br>- Setup EFS for persistent storage (PostgreSQL data, model weights).<br>- Test cross-service access permissions. | 12/06/2026 | 12/06/2026 | S3 và EFS Documentation |
+| 6 | Implement Container Infrastructure:<br>- Setup Amazon ECR repositories cho Docker images.<br>- Tạo ECS cluster với EC2 launch type.<br>- Configure Auto Scaling Group với GPU instances (g4dn.xlarge).<br>- Setup ECS task definitions với EFS mount points. | 13/06/2026 | 14/06/2026 | ECS và ECR Documentation |
 
-![Cấu Trúc Hạ Tầng Đồ Án Trọng Đạt - Siêu Phân Giải Ảnh AI (AI Upscaler)](/images/week9/project-architecture-ai-upscaler.png)
-*Biểu Tượng Hình Phân Giải: Hệ lưới chặn WAF → Rẽ tuyến đường CloudFront → Hosting thông qua Amplify (bằng Next.js); Tường đăng nhập Cognito → Giao liên trọng tải ALB → Hệ xử lý ảo máy EC2 (Code FastAPI backend); Hệ khay AI phụ bao trọn (SQS làm tin báo bưu phẩm, Rekognition nhận dạng khuôn thâm, SageMaker là nguồn chúa tể render, đóng gói với serverless Lambda functions); Trữ vào kho lưu như S3, dùng bộ cơ sở truy vấn lẹ làng qua DynamoDB và hệ nhớ tạm qua ElastiCache; Luôn được mã hóa các điểm vào với Secrets Manager báo tin sự cố qua đám mây CloudWatch Alerts.*
+![Architecture Diagram - Upscale AI Platform](/images/2-Proposal/sodo.jpg)
+*Sơ đồ kiến trúc tổng quan: CloudFront + WAF → S3 (Frontend) → ALB → ECS (Backend) → S3 + EFS (Storage), với ElastiCache Redis và SQS cho async processing.*
 
 ### Kết quả đạt được tuần 9
 
 **Kiến thức**
-* Hiểu bộ hỗ trợ phát triển điện toán AWS Toolkit làm trơn luồng mượt code và tối ưu từ ngay cấp trình IDE (VS Code).
-* Mở khóa mảng quyền hạn đăng kí người sử dụng tổng quát cấp multi-account nhờ hệ chức năng tổng quản IAM Identity Center (truyền thống tên AWS SSO).
-* Vạch định rành rõ hạ tầng của một siêu dự án (Capstone) vào phần đồ hình lớp thứ cấp: UI frontend, khối ngầm API hạch tâm backend, mảng quy hoạc cấu dữ liệu cho trí tuệ nhân tạo (AI processing), trạm lót data tạm rồi tới vùng giám hành hệ Cloud.
-* Trích đường luồng mạch dẫn gói dữ kiện, bắt đầu bởi truy vấn trạm user thông nối sang cửa kiểm ngạch Web tường lửa (WAF), trượt phân mảng lưới toàn cầu (CloudFront), hạ tới mã ngầm Backend sau rùng tới dàn đường ống xử lý kỹ năng học máy đồ sộ AI Pipeline.
+* Hiểu cách AWS Toolkit tích hợp development workflow với AWS services ngay trong IDE.
+* Nắm được IAM Identity Center architecture và cách manage multi-account access với SSO.
+* Hoàn thiện hiểu biết về container orchestration với ECS trên EC2 (không phải Fargate).
+* Hiểu lý do chọn ECS+EC2 thay vì Lambda: cần GPU cho AI inference, task execution time dài (>15 phút).
 
 **Kỹ năng thực hành**
-* **Mở trạm VS Code:** Truy xuất IDE móc tròng lên dịch vụ khu AWS, tự lật bảng mục lục tài sản dịch vụ (resources), ứng nghiệm kịch bản debug-deploy tại chỗ chưa từng trải nghiệm qua console AWS truyền thống.
-* **Mạng SSO / IAM Identity Center:** Nắn nót lại một bộ quyền giới phân ban cho cấp quản trị, xuất file cấu thử qua liên mạch truy vấn kiểm duyệt xác nhận đăng nhập qua luồng bảo hộ.
-* **Xây Dựng Hình Kiến Trúc:** Mô tả sắc sảo lên sơ đồ luồng luân chuyển mô đun siêu dự án của tôi. Hết sức vinh dự là đã liệt kê rất nhiều cựu thần chiến trận mảng AWS (như tường lửa máy thủ - WAF, Cụm giao mạng CDN - CloudFront, AWS Amplify, Cognito xác thực, ALB loadbalancers cân bằng trọng tả, máy EC2, AWS SageMaker máy học nhân tạo, Cloud hệ thống khối S3, Dynamo DB tốc độ bàn thờ và CloudWatch mắt tuệ giác).
-* **Bắt Mạch Dự Án Đồ Án:** Nhấn nốt những khung kiến trúc xương cá bằng bản ngã code tự phát triển thông qua mảng mấu họa hình sơ đồ mạng nãy giờ.
+* **AWS Toolkit:** Sử dụng VS Code để browse AWS resources, debug Lambda locally, view CloudWatch logs real-time.
+* **IAM Identity Center:** Thiết lập SSO với permission sets, assign users/groups, test federated access.
+* **Architecture Design:** Tạo detailed architecture diagram với Lucidchart/Draw.io, document tất cả connections và data flows.
+* **S3 Implementation:** 
+  - Bucket `upscale-ai-uploads`: CORS enabled, presigned URLs cho upload
+  - Bucket `upscale-ai-processed`: CloudFront distribution cho delivery
+  - Bucket `upscale-ai-models`: Private, chứa Real-ESRGAN weights
+* **ECS Setup:** 
+  - Cluster `upscale-ai-cluster` với capacity provider (Auto Scaling Group)
+  - ECR repositories: `backend-api`, `ai-processor`
+  - Task definitions với GPU support và EFS volumes
 
 **Giải quyết vấn đề**
-* Đánh gãy rắc rối credential lằng nhằng hoặc đụng trạng profile lúc chuyển tài khoản (switching accounts) / đổi khu (regions) mảng mã trạm trực tiếp ở giao thức AWS Toolkit tại VS Code IDE.
-* Va bóp đắp lỗi sập chặn mảng cấp quyền ở SSO bằng cách nới chỉnh các file cấu đặc quyền sets quyền tham nhượng trong nhánh tài khoản phân chia.
-* Đồng nhất thiết kế và khả thi khả thi để cấu vào điều kiện khuôn giới (tiết giảm nợ phí (cost), hạn ngạch giới định (quotas) cùng thói quen của người thiết lập vận dụng AWS services trứ danh).
-* Tách việc tạo dựng và xé nhỏ lớp kiến trúc từ sơ đồ vạn chưởng nhằm đạt tới triển hạn trơn tru qua mô típ nhỏ nhẹ, từng mảng triển khai khớp theo hệ diagram thiết họa lúc sáng tạo thiết đồ án.
+* Fix AWS Toolkit credential issues bằng cách configure proper AWS CLI profile.
+* Troubleshoot SSO permission set assignments khi users không thấy expected accounts.
+* Giải quyết ECS task placement constraints để ensure tasks chạy trên GPU instances.
+* Debug EFS mount issues trong ECS tasks bằng cách verify security groups và mount targets.
+* Optimize Docker images để reduce pull time từ ECR (multi-stage builds, layer caching).
 
 
