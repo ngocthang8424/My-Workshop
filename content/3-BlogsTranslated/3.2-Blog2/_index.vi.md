@@ -35,3 +35,9 @@ Amazon EFS là dịch vụ lưu trữ tệp dùng chung cho nhiều EC2. Thông 
 ### Kết luận
 
 Sự kết hợp giữa VPC, EC2 và EFS tạo nên một kiến trúc có khả năng mở rộng cao, dữ liệu được chia sẻ tập trung, tính sẵn sàng tốt và dễ dàng quản lý. Đây là mô hình thường được sử dụng cho các ứng dụng web, hệ thống doanh nghiệp và các nền tảng cần nhiều máy chủ cùng truy cập một nguồn dữ liệu chung.
+
+---
+
+### Bài viết đã được chia sẻ trên AWS Study Group
+
+![Bài viết trên AWS Study Group VN](/images/blog2/facebook-post.png)

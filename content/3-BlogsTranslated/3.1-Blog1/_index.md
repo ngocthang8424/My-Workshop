@@ -69,3 +69,9 @@ pre: " <b> 3.1. </b> "
 ### Conclusion
 
 The architecture balances image quality and operability — suitable for cloud deployment, easy to extend, with clear improvement paths for performance and cost.
+
+---
+
+### Post Shared on AWS Study Group
+
+![Post on AWS Study Group VN](/images/blog1/facebook-post.png)

@@ -35,3 +35,9 @@ Amazon EFS is a shared file storage service for multiple EC2 instances. Through 
 ### Conclusion
 
 The combination of VPC, EC2, and EFS creates a highly scalable architecture with centralized shared data, strong availability, and straightforward management. This pattern is commonly used for web applications, enterprise systems, and platforms where many servers need access to the same shared data.
+
+---
+
+### Post Shared on AWS Study Group
+
+![Post on AWS Study Group VN](/images/blog2/facebook-post.png)

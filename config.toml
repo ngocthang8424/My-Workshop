@@ -21,15 +21,15 @@ home = [ "HTML", "RSS", "JSON"]
   # Git hub repo link
   editURL = ""
   description = ""
-  author = "Thông tin sinh viên"
+  author = ""
   showVisitedLinks = true
-  disableBreadcrumb = false
+  disableBreadcrumb = true
   disableNextPrev = false
   DisableShortcutsTitle = true
   
 [Languages]
 [Languages.en]
-title = "Internship Report"
+title = ""
 weight = 1
 languageName = "English"
 
@@ -45,7 +45,7 @@ url = "https://www.facebook.com/groups/awsstudygroupfcj/"
 weight = 20
 
 [Languages.vi]
-title = "Báo cáo thực tập"
+title = ""
 weight = 2
 languageName = "Tiếng Việt"
 
